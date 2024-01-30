@@ -56,7 +56,7 @@ jobs:
         run: ls -R ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       - name: Build with dotnet
-        run: dotnet build cnet-oykryo.web.api.sln --configuration Release
+        run: dotnet build cnet-oykryo.web.api.csproj --configuration Release
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp

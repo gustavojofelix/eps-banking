@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cnet-oykryo.web.api", "cnet-oykryo.web.api.csproj", "{55A29B63-ABE8-442D-921C-A560DE7E916F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cnet-oykryo.domain", "..\cnet-oykryo.domain\cnet-oykryo.domain.csproj", "{75FAD920-3985-4B68-BF6E-4209978B0184}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cnet-oykryo.Infrastructure", "..\cnet-oykryo.Infrastructure\cnet-oykryo.Infrastructure.csproj", "{483FBAD9-AC97-4153-97CA-D82B96ED2297}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cnet-oykryo.application", "..\cnet-oykryo.application\cnet-oykryo.application.csproj", "{92E1C425-08EB-4DB8-8D75-AD403708F98F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cnet-oykryo.tests", "..\cnet-oykryo.tests\cnet-oykryo.tests.csproj", "{BF4E612D-0A8C-4A89-B224-EC5503B66DD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cnet-oykryo.IoCRoot", "..\cnet-oykryo.IoCRoot\cnet-oykryo.IoCRoot.csproj", "{EBB01B1D-2CB8-4C9E-8775-A0C489A33084}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55A29B63-ABE8-442D-921C-A560DE7E916F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A29B63-ABE8-442D-921C-A560DE7E916F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A29B63-ABE8-442D-921C-A560DE7E916F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A29B63-ABE8-442D-921C-A560DE7E916F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75FAD920-3985-4B68-BF6E-4209978B0184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75FAD920-3985-4B68-BF6E-4209978B0184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75FAD920-3985-4B68-BF6E-4209978B0184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75FAD920-3985-4B68-BF6E-4209978B0184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{483FBAD9-AC97-4153-97CA-D82B96ED2297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{483FBAD9-AC97-4153-97CA-D82B96ED2297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{483FBAD9-AC97-4153-97CA-D82B96ED2297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{483FBAD9-AC97-4153-97CA-D82B96ED2297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E1C425-08EB-4DB8-8D75-AD403708F98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E1C425-08EB-4DB8-8D75-AD403708F98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E1C425-08EB-4DB8-8D75-AD403708F98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E1C425-08EB-4DB8-8D75-AD403708F98F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF4E612D-0A8C-4A89-B224-EC5503B66DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4E612D-0A8C-4A89-B224-EC5503B66DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4E612D-0A8C-4A89-B224-EC5503B66DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4E612D-0A8C-4A89-B224-EC5503B66DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB01B1D-2CB8-4C9E-8775-A0C489A33084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB01B1D-2CB8-4C9E-8775-A0C489A33084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB01B1D-2CB8-4C9E-8775-A0C489A33084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB01B1D-2CB8-4C9E-8775-A0C489A33084}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F1DDFA3-8620-42B6-9C93-512C60DD7958}
+	EndGlobalSection
+EndGlobal

@@ -21,7 +21,7 @@ name: Build and deploy ASP.Net Core app to an Azure Web App
 
 env:
   AZURE_WEBAPP_NAME: epsbanking    # set this to the name of your Azure Web App
-  AZURE_WEBAPP_PACKAGE_PATH: 'cnet-oykryo.web.api'      # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '6.0.x'                 # set this to the .NET Core version to use
 
 on:
@@ -59,7 +59,7 @@ jobs:
         run: dotnet build cnet-oykryo.web.api/cnet-oykryo.web.api.csproj --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp cnet-oykryo.web.api/cnet-oykryo.web.api.csproj
+        run: dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' cnet-oykryo.web.api/cnet-oykryo.web.api.csproj
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -88,4 +88,4 @@ jobs:
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ${{env.DOTNET_ROOT}}/myapp
+          package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'

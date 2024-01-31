@@ -7,7 +7,7 @@ namespace cnet_oykryo.application.Services
         Task CreateAccount(Customer customer, decimal initialDeposit);
         decimal GetAccountBalance(BankAccount account);
         Task<BankAccount> GetAccountByAccountNumber(string accountNumber);
-        List<Transfer> GetTransferHistory(BankAccount account);
+        Task<List<Transfer>> GetTransferHistory(BankAccount account);
         Task TransferAmount(BankAccount sourceAccount, BankAccount destinationAccount, decimal amount);
     }
 }

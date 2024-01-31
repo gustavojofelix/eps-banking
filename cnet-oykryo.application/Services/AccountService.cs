@@ -8,10 +8,12 @@ namespace cnet_oykryo.application.Services
     public class AccountService : IAccountService
     {
         private readonly IBankAccountRepository _accountRepository;
+        private readonly ITransferRepository _transferRepository;
 
-        public AccountService(IBankAccountRepository accountRepository)
+        public AccountService(IBankAccountRepository accountRepository, ITransferRepository transferRepository)
         {
             _accountRepository = accountRepository;
+            _transferRepository = transferRepository;
         }
 
         public async Task CreateAccount(Customer customer, decimal initialDeposit)
@@ -118,7 +120,7 @@ namespace cnet_oykryo.application.Services
             return account.Balance;
         }
 
-        public List<Transfer> GetTransferHistory(BankAccount account)
+        public async Task<List<Transfer>> GetTransferHistory(BankAccount account)
         {
             // Business logic for retrieving the transfer history of an account
 
@@ -128,7 +130,7 @@ namespace cnet_oykryo.application.Services
             // Optionally,   perform additional logic before returning the transfer history.
 
             // Example: Filtering or sorting the transfer history based on business rules.
-
+            account.Transfers = await _transferRepository.GetTransferHistoryAsync(account.Id);
             return account.Transfers;
         }
 

@@ -24,6 +24,7 @@ namespace cnet_oykryo.IoCRoot
             .AddScoped<ICustomerService, CustomerService>()
             .AddScoped<ICustomerRepository, CustomerRepository>()
             .AddScoped<IBankAccountRepository, BankAccountRepository>()
+            .AddScoped<ITransferRepository, TransferRepository>()
             // Register your DbContext with the connection string
             .AddDbContext<EPSDBContext>(options =>
                     options.UseSqlServer(

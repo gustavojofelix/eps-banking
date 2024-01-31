@@ -18,7 +18,8 @@ namespace cnet_oykryo.tests
         {
             // Arrange
             var mockRepository = new Mock<IBankAccountRepository>();
-            var accountService = new AccountService(mockRepository.Object);
+            var mockTransRepository = new Mock<ITransferRepository>();
+            var accountService = new AccountService(mockRepository.Object, mockTransRepository.Object);
 
             var customer = new Customer { Id = 1, Name = "John Doe" };
             var initialDeposit = 1000m;
@@ -36,7 +37,8 @@ namespace cnet_oykryo.tests
         {
             // Arrange
             var mockRepository = new Mock<IBankAccountRepository>();
-            var accountService = new AccountService(mockRepository.Object);
+            var mockTransRepository = new Mock<ITransferRepository>();
+            var accountService = new AccountService(mockRepository.Object, mockTransRepository.Object);
 
             var sourceAccount = new BankAccount { Id = 1, Balance = 1000m };
             var destinationAccount = new BankAccount { Id = 2, Balance = 500m };
@@ -56,7 +58,8 @@ namespace cnet_oykryo.tests
         {
             // Arrange
             var mockRepository = new Mock<IBankAccountRepository>();
-            var accountService = new AccountService(mockRepository.Object);
+            var mockTransRepository = new Mock<ITransferRepository>();
+            var accountService = new AccountService(mockRepository.Object, mockTransRepository.Object);
 
             var account = new BankAccount { Id = 1, Balance = 1000m };
 
@@ -72,7 +75,8 @@ namespace cnet_oykryo.tests
         {
             // Arrange
             var mockRepository = new Mock<IBankAccountRepository>();
-            var accountService = new AccountService(mockRepository.Object);
+            var mockTransRepository = new Mock<ITransferRepository>();
+            var accountService = new AccountService(mockRepository.Object, mockTransRepository.Object);
 
             var accountNumber = "123456789";
             var expectedAccount = new BankAccount { Id = 1, AccountNumber = accountNumber };
